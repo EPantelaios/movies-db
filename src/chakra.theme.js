@@ -22,6 +22,23 @@ export const theme = extendTheme({
       body: {
         background: '#e7f8f8',
       },
+      'body::-webkit-scrollbar-track': {
+        boxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.3)',
+        WebkitBoxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.3)',
+        MozBoxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.3)',
+        borderRadius: '10px',
+        backgroundColor: '#F5F5F5',
+      },
+      'body::-webkit-scrollbar': {
+        width: '10px',
+      },
+      'body::-webkit-scrollbar-thumb': {
+        borderRadius: '10px',
+        boxShadow: 'inset 0 0 6px rgba(0, 0, 0, .3)',
+        WebkitBoxShadow: 'inset 0 0 6px rgba(0, 0, 0, .3)',
+        MozBoxShadow: 'inset 0 0 6px rgba(0, 0, 0, .3)',
+        backgroundColor: '#555',
+      },
       '::selection': {
         backgroundColor: 'teal.400',
         color: 'white',
