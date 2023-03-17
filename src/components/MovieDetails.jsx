@@ -9,9 +9,16 @@ function MovieDetails({ favorites, handleAddFavorite, handleRemoveFavorite }) {
   const toast = useToast();
 
   useEffect(() => {
-    getMovieDetails(imdbID)
-      .then((data) => setMovie(data))
-      .catch((error) => console.error(error));
+    const fetchMovieDetails = async () => {
+      try {
+        const data = await getMovieDetails(imdbID);
+        setMovie(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchMovieDetails();
   }, [imdbID]);
 
   const handleFavorite = () => {
