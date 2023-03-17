@@ -33,7 +33,7 @@ function App() {
   return (
     <Router>
       {/* <Header /> */}
-      <Box maxWidth="800px" margin="0 auto" pt="4">
+      <Box margin="0 auto">
         <Switch>
           <Route exact path="/">
             <SearchPage
@@ -41,7 +41,7 @@ function App() {
               favorites={favorites}
             />
           </Route>
-          {/* <Route path="/movie/:id">
+          <Route path="/movie/:id">
             <MovieDetails
               handleAddFavorite={handleAddFavorite}
               handleRemoveFavorite={handleRemoveFavorite}
@@ -53,7 +53,7 @@ function App() {
               favorites={favorites}
               handleRemoveFavorite={handleRemoveFavorite}
             />
-          </Route> */}
+          </Route>
         </Switch>
       </Box>
     </Router>
