@@ -1,4 +1,4 @@
-const OMDB_API_KEY = 'e5f8eee0';
+import { OMDB_API_KEY } from '../config/request-config';
 
 const responseHandler = (response, data) => {
   if (response.ok) {
@@ -12,11 +12,10 @@ const responseHandler = (response, data) => {
   }
 };
 
-export async function getMoviesByTitle(title) {
+export async function getMoviesByTitle(title, page) {
   const encodedTitle = encodeURIComponent(title);
-  //add parameter &page=1-10
   const response = await fetch(
-    `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${encodedTitle}`
+    `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${encodedTitle}&page=${page}`
   );
   const data = await response.json();
   return responseHandler(response, data);
