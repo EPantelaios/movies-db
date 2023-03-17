@@ -1,15 +1,8 @@
 import { Button } from '@chakra-ui/react';
 
-function MainButton({
-  children,
-  type = 'submit',
-  onClick,
-  isDisabled = false,
-  ...restProps
-}) {
+function MainButton({ children, onClick, isDisabled = false, ...restProps }) {
   return (
     <Button
-      type={type}
       onClick={onClick}
       isDisabled={isDisabled}
       textDecoration="none"
