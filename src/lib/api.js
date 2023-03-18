@@ -3,7 +3,6 @@ import { OMDB_API_KEY } from '../config/request-config';
 const responseHandler = (response, data) => {
   if (response.ok) {
     if (data.Response === 'True') {
-      console.info(data);
       return data;
     } else {
       throw new Error(data.Error || 'Could not get movies. Try again');

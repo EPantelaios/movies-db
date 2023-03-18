@@ -14,7 +14,6 @@ const FavoritesProvider = ({ children }) => {
   const [favorites, setFavorites] = useState(() => setAndRetriveLocalStorage());
 
   const handleAddFavorite = (movie) => {
-    console.log('movieContext', movie);
     setFavorites((prev) => {
       const updated = [...prev];
       updated.unshift(movie);

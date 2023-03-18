@@ -11,7 +11,6 @@ function MovieList({ onLoadMore }) {
   const { searchResults, hasMore, error, isLoading } =
     useContext(HomepageContext);
 
-  console.log('searchResults__:', searchResults);
   return (
     <Stack spacing={10}>
       {searchResults &&

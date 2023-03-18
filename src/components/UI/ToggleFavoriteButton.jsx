@@ -35,7 +35,6 @@ const ToggleFavoriteButton = ({ movie }) => {
         });
       }
     } else {
-      console.log('movie: ', movie);
       handleAddFavorite(movie);
       setIsFavorite(true);
       toast({
