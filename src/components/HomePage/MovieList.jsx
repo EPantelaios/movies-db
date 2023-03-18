@@ -1,10 +1,16 @@
-import { Stack, Heading, Box, Flex } from '@chakra-ui/react';
+import { useContext } from 'react';
+
+import { Stack, Heading, Flex } from '@chakra-ui/react';
 
 import MovieCard from './MovieCard';
+import HomepageContext from '../../store/homepage/HomepageContext';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import MainButton from '../UI/MainButton';
 
-function MovieList({ searchResults, error, isLoading, hasMore, onLoadMore }) {
+function MovieList({ onLoadMore }) {
+  const { searchResults, hasMore, error, isLoading } =
+    useContext(HomepageContext);
+
   console.log('searchResults__:', searchResults);
   return (
     <Stack spacing={10}>

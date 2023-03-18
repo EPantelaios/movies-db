@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
+
 import FavoritesContext from './FavoritesContext';
 
 const FavoritesProvider = ({ children }) => {
@@ -12,7 +13,6 @@ const FavoritesProvider = ({ children }) => {
 
   const [favorites, setFavorites] = useState(() => setAndRetriveLocalStorage());
 
-  // Add a movie to the favorites list
   const handleAddFavorite = (movie) => {
     console.log('movieContext', movie);
     setFavorites((prev) => {
@@ -23,7 +23,6 @@ const FavoritesProvider = ({ children }) => {
     });
   };
 
-  // Remove a movie from the favorites list
   const handleRemoveFavorite = (imdbID) => {
     setFavorites((prev) => {
       const updated = prev.filter((movie) => movie.imdbID !== imdbID);

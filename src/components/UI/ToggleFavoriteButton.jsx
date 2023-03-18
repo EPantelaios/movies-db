@@ -9,7 +9,6 @@ import FavoritesContext from '../../store/favorites/FavoritesContext';
 const ToggleFavoriteButton = ({ movie }) => {
   const { favorites, handleAddFavorite, handleRemoveFavorite } =
     useContext(FavoritesContext);
-  console.log('favoritesToogle: ', favorites);
   const [isFavorite, setIsFavorite] = useState(
     favorites.some((m) => m.imdbID === movie.imdbID)
   );

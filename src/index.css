@@ -32,7 +32,7 @@ a:hover {
 }
 
 a:focus {
-  outline: 2px solid red;
+  outline: 2px solid teal;
 }
 
 .centered {
