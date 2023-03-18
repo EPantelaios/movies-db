@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <Flex
+      id="header"
       as="header"
       direction="row"
       alignItems="center"
