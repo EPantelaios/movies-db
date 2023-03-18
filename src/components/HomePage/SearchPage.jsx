@@ -6,6 +6,8 @@ import MovieList from './MovieList';
 import SearchForm from './SearchForm';
 import { getMoviesByTitle } from '../../lib/api';
 import HomepageContext from '../../store/homepage/HomepageContext';
+import { sortItems } from '../../utils/sortItems';
+import SortMenu from '../UI/SortMenu';
 
 function SearchPage() {
   const {
@@ -69,6 +71,12 @@ function SearchPage() {
     setHasMore(searchResults.length < totalMovies);
   }, [searchResults, totalMovies]);
 
+  const selectHandler = (selectedOption) => {
+    const sortResults = sortItems(searchResults, selectedOption);
+    console.log('sortResults:', sortResults);
+    setSearchResults([...sortResults]);
+  };
+
   return (
     <Box margin="0 auto">
       <Flex
@@ -84,13 +92,12 @@ function SearchPage() {
           onSearch={handleSearch}
           isLoading={isLoading}
         />
-        <MovieList
-          searchResults={searchResults}
-          error={error}
-          isLoading={isLoading}
-          hasMore={hasMore}
-          onLoadMore={handleLoadMore}
+        <SortMenu
+          options={['Title', 'Year']}
+          onSelect={selectHandler}
+          _disabled={searchResults}
         />
+        <MovieList onLoadMore={handleLoadMore} />
       </Flex>
     </Box>
   );
