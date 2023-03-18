@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 
-import { IconButton } from '@chakra-ui/react';
+import { IconButton, useBreakpointValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { IoIosArrowUp } from 'react-icons/io';
 
 export function ScrollButton({ id }) {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
+
+  const buttonSize = useBreakpointValue({ base: 'sm', md: 'md' });
 
   function scrollToID() {
     const el = document.getElementById(id);
@@ -50,15 +52,15 @@ export function ScrollButton({ id }) {
       style={{
         zIndex: 100,
         position: 'fixed',
-        right: '2rem',
-        bottom: 'rem',
+        right: '1.5rem',
+        bottom: '1.5rem',
       }}
     >
       <IconButton
         aria-label="scroll-button"
         icon={<IoIosArrowUp fontSize="1.7rem" />}
         bg="bg"
-        size="md"
+        size={buttonSize}
         shadow="lg"
         rounded="lg"
         color="gray"
