@@ -5,7 +5,7 @@ import { Heading, Flex, Stack } from '@chakra-ui/react';
 import FavoritesContext from '../../store/favorites/FavoritesContext';
 import MovieCard from '../HomePage/MovieCard';
 
-function FavoritesPage() {
+function Favorites() {
   const { favorites } = useContext(FavoritesContext);
 
   return (
@@ -27,4 +27,4 @@ function FavoritesPage() {
   );
 }
 
-export default FavoritesPage;
+export default Favorites;

@@ -1,7 +1,7 @@
 import { Flex, Heading } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
-import MainButton from '../../components/UI/MainButton';
+import MainButton from '../UI/MainButton';
 
 const NotFound = () => {
   return (

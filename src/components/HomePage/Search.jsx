@@ -9,7 +9,7 @@ import HomepageContext from '../../store/homepage/HomepageContext';
 import { sortItems } from '../../utils/sortItems';
 import SortMenu from '../UI/SortMenu';
 
-function SearchPage() {
+function Search() {
   const {
     searchTerm,
     setSearchTerm,
@@ -73,7 +73,6 @@ function SearchPage() {
 
   const selectHandler = (selectedOption) => {
     const sortResults = sortItems(searchResults, selectedOption);
-    console.log('sortResults:', sortResults);
     setSearchResults([...sortResults]);
   };
 
@@ -103,4 +102,4 @@ function SearchPage() {
   );
 }
 
-export default SearchPage;
+export default Search;

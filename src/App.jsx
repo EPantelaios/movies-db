@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import FavoritesPage from './components/Favorites/FavoritesPage';
-import SearchPage from './components/HomePage/SearchPage';
 import Layout from './components/Layout/Layout';
-import MovieDetails from './components/MovieDetails/MovieDetails';
 import { ScrollButton } from './hooks/scroll-button';
-import NotFound from './pages/NotFoundPage/NotFound';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
+import HomePage from './pages/HomePage/HomePage';
+import MovieDetailsPage from './pages/MovieDetailsPage/MovieDetailsPage';
 
 function App() {
   return (
@@ -14,16 +14,16 @@ function App() {
       <Layout>
         <Switch>
           <Route exact path="/">
-            <SearchPage />
+            <HomePage />
           </Route>
           <Route path="/movie/:imdbID">
-            <MovieDetails />
+            <MovieDetailsPage />
           </Route>
           <Route exact path="/favorites">
             <FavoritesPage />
           </Route>
           <Route path="*">
-            <NotFound />
+            <NotFoundPage />
           </Route>
         </Switch>
       </Layout>
