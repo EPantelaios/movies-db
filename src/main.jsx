@@ -21,6 +21,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </HomepageProvider>
       </ChakraProvider>
     </ErrorBoundary>
-    //{' '}
   </React.StrictMode>
 );
