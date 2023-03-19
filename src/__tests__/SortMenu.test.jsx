@@ -1,4 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
+
 import SortMenu from '../components/UI/SortMenu';
 
 describe('SortMenu', () => {

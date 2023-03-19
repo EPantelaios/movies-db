@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom';
 
@@ -11,7 +11,6 @@ function MovieDetails() {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    console.log('imdbID: ', imdbID);
     const fetchMovieDetails = async () => {
       try {
         const data = await getMovieDetails(imdbID);

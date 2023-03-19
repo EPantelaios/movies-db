@@ -1,7 +1,7 @@
-import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import FavoritesContext from '../../src/store/favorites/FavoritesContext';
+
 import ToggleFavoriteButton from '../../src/components/UI/ToggleFavoriteButton';
+import FavoritesContext from '../../src/store/favorites/FavoritesContext';
 
 describe('ToggleFavoriteButton', () => {
   const mockAddFavorite = jest.fn();
@@ -13,7 +13,7 @@ describe('ToggleFavoriteButton', () => {
     mockRemoveFavorite.mockClear();
   });
 
-  test('renders correctly when not a favorite', () => {
+  it('renders correctly when not a favorite', () => {
     const { getByLabelText, getByTitle } = render(
       <FavoritesContext.Provider
         value={{
@@ -40,7 +40,7 @@ describe('ToggleFavoriteButton', () => {
     });
   });
 
-  test('renders correctly when already a favorite', () => {
+  it('renders correctly when already a favorite', () => {
     const { getByLabelText, getByTitle } = render(
       <FavoritesContext.Provider
         value={{
@@ -64,7 +64,7 @@ describe('ToggleFavoriteButton', () => {
     expect(mockRemoveFavorite).toHaveBeenCalledWith('tt123456');
   });
 
-  test('checks that the addition to favorites works properly', () => {
+  it('checks that the addition to favorites works properly', () => {
     const mockRemoveFavorite = jest.fn();
     const { getByLabelText } = render(
       <FavoritesContext.Provider
@@ -84,7 +84,7 @@ describe('ToggleFavoriteButton', () => {
     expect(mockRemoveFavorite).toHaveBeenCalledTimes(0);
   });
 
-  test('checks that the removal from favorites works properly', () => {
+  it('checks that the removal from favorites works properly', () => {
     const mockAddFavorite = jest.fn();
     const { getByLabelText } = render(
       <FavoritesContext.Provider

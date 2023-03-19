@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Flex, Image, Text, Box } from '@chakra-ui/react';
 
 import MovieDetailsItem from './MovieDetailsItem';

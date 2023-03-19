@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Layout from './components/Layout/Layout';
 import { ScrollButton } from './hooks/scroll-button';
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
 import HomePage from './pages/HomePage/HomePage';
 import MovieDetailsPage from './pages/MovieDetailsPage/MovieDetailsPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
