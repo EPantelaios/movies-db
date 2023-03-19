@@ -1,8 +1,12 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+
 import App from '../App';
 
+jest.mock('@chakra-ui/react', () => ({
+  ...jest.requireActual('@chakra-ui/react'),
+  useBreakpointValue: jest.fn(),
+}));
 describe('App', () => {
   it('renders the home page on the root path', () => {
     render(
