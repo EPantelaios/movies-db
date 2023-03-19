@@ -14,6 +14,7 @@ function SortMenu({ options, onSelect }) {
   return (
     <Menu>
       <MenuButton
+        data-testid="sort-menu"
         as={Button}
         rightIcon={<ChevronDownIcon boxSize={5} />}
         backgroundColor="teal"

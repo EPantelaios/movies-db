@@ -46,7 +46,9 @@ const ToggleFavoriteButton = ({ movie }) => {
 
   return (
     <IconButton
-      aria-label="Toggle to favorites"
+      aria-label={`${
+        isFavorite ? 'Remove from favorites' : 'Add to favorites'
+      }`}
       title={`${isFavorite ? 'Remove from favorites' : 'Add to favorites'}`}
       icon={
         <motion.div

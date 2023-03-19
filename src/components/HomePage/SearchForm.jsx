@@ -31,6 +31,8 @@ function SearchForm({ inputValue, onSearch, isLoading }) {
         }}
       />
       <MainButton
+        data-testid="search-button"
+        aria-label="Search"
         onClick={(e) => handleSubmit(e)}
         isDisabled={isLoading}
         mt={{ base: '4', md: '0' }}

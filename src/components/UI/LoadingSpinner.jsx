@@ -19,6 +19,7 @@ function LoadingSpinner() {
       flexWrap="wrap"
     >
       <Box
+        data-testid="loading-spinner"
         display="inline-block"
         width="80px"
         height="80px"
