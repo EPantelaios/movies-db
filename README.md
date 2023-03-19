@@ -27,7 +27,7 @@ docker-compose up <br/>
 visit localhost on port 5173
 
 2) Visit url (hosted on Vercel) <br/>
-https://moviesdb.epantelaios.vercel.app/
+https://movies-db-epantelaios.vercel.app
 
 
 #### `App description:`
